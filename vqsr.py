@@ -99,7 +99,7 @@ class GATK_VQSR(define.Wrapper):
            content += " " + self.params.cmd_SelectVariants
         content += " -o " + out_raw_vcf + " && \\\n"
  
-#step2(VariantRecalibrator):
+        #step2(VariantRecalibrator):
         content += "java -Xmx5G -Djava.io.tmpdir=./java_tmp -jar /opt/bin/GenomeAnalysisTK.jar -T VariantRecalibrator -R " + fa + " -input " + out_raw_vcf + " \\\n"
 
         if(self.inputs.In_resource_hapmap):
