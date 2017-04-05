@@ -1,6 +1,4 @@
-import re
-import os
-import sys
+import re, os, sys
 from l3sdk import define, Process, require
 
 @require(mem_mb=6000, cpu=require.CPU_SINGLE, high_io=True, disk_space_gb=200)
